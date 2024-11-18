@@ -37,7 +37,7 @@ function AddingTask(){
 function EnteredValueNull(){
     AddTask.value="";
     // AddTask.focus();
-    ErrorMsg.textContent="Task Adikkeda Kunne";
+    ErrorMsg.textContent="Please provide a task to add";
 }
 function KeyEnter(event){
     if(event.key==="Enter"){
