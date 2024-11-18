@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do-List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="to-do-list.png">
+</head>
+<body>
+    <div class="logo">
+    <img src="to-do-list.png" alt="">
+    <h1>Do List</h1>
+</div>
+    <div class="container">
+    <div class="add-task-container">
+            <input type="text" placeholder="Enter Task..." class="add-task" id="addtask" onkeydown="KeyEnter(event)">
+        </div>
+            <div class="contain-button">
+                <button  class="AddEventButton" id="AddEventButton">Add Task</button>
+            </div>
+    </div>
+    <div class="get-item-container">
+        <div class="error-message">
+        <span  class="error-msg" id="error-msg"></span>
+        </div>
+        <div class="get-item" id="get-item">
+            <!-- tasks are being added -->
+        </div>
+</div>
+<script src="scripts.js"></script>  
+</body>
+</html>
