@@ -2,16 +2,15 @@ const AddTask = document.getElementById('addtask');
 const AddTaskBtn = document.getElementById('AddEventButton');
 const GetItem = document.getElementById('get-item');
 const ErrorMsg = document.getElementById('error-msg');
-
+// GetItem.innerHTML = localStorage.getItem('AddTaskValue');
 AddTaskBtn.addEventListener('click',function(){
     AddingTask();
-    localStorage.getItem('tasks');
 });
-
 function AddingTask(){
     const task = document.createElement('p');
     task.textContent=AddTask.value.trim();
-    
+
+    // localStorage.setItem('AddTaskValue',task);
     if (AddTask.value.trim()==="")
     {
         EnteredValueNull();
@@ -23,7 +22,6 @@ function AddingTask(){
         AddTask.value = "";
         ErrorMsg.textContent="";
     }
-
     task.addEventListener('click',function(){
         task.style.textDecoration="line-through";
         task.style.backgroundColor="#17B169";
@@ -37,7 +35,7 @@ function AddingTask(){
 function EnteredValueNull(){
     AddTask.value="";
     // AddTask.focus();
-    ErrorMsg.textContent="Please enter a task";
+    ErrorMsg.textContent="Please enter a task!";
 }
 function KeyEnter(event){
     if(event.key==="Enter"){
